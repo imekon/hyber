@@ -1,0 +1,6 @@
+1. Pick a card
+2. Play a planet card to gain an energy point
+3. Play an attack card if you have sufficient energy points
+4. If any card is available, set it to attack
+5. Attack!
+6. End turn.
