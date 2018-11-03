@@ -1,13 +1,33 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://images/starfield.png" type="Texture" id=2]
 [ext_resource path="res://images/spacestation.png" type="Texture" id=3]
 [ext_resource path="res://fonts/SF Atarian System.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scenes/PlayerCard.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/EnemyCard.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 36
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 24
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 24
 outline_size = 0
 outline_color = Color( 1, 1, 1, 1 )
 use_mipmaps = false
@@ -27,7 +47,7 @@ __meta__ = {
 }
 
 [node name="Hybridiser" type="Sprite" parent="."]
-position = Vector2( 650, 630 )
+position = Vector2( 650, 610 )
 texture = ExtResource( 3 )
 
 [node name="Player" type="Node2D" parent="."]
@@ -53,26 +73,31 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="LifeLabel" type="Label" parent="Player"]
+[node name="TitleLabel" type="Label" parent="Player"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 200.0
-margin_top = 720.0
-margin_right = 340.0
-margin_bottom = 756.0
+margin_left = 1150.0
+margin_top = 40.0
+margin_right = 1250.0
+margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "Life: 100"
+custom_fonts/font = SubResource( 2 )
+text = "Enemy"
+align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="Card" parent="Player" instance=ExtResource( 5 )]
+position = Vector2( 1200, 610 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Enemy" type="Node2D" parent="."]
 
@@ -82,9 +107,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 10.0
-margin_top = 20.0
+margin_top = 10.0
 margin_right = 150.0
-margin_bottom = 56.0
+margin_bottom = 46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -97,24 +122,79 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="LifeLabel" type="Label" parent="Enemy"]
+[node name="TitleLabel" type="Label" parent="Enemy"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 200.0
-margin_top = 20.0
-margin_right = 340.0
-margin_bottom = 56.0
+margin_left = 1150.0
+margin_top = 700.0
+margin_right = 1252.0
+margin_bottom = 724.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "Life: 100"
+custom_fonts/font = SubResource( 2 )
+text = "Player"
+align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="Card" parent="Enemy" instance=ExtResource( 6 )]
+position = Vector2( 1200, 150 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="HybridButton" type="Button" parent="."]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 590.0
+margin_top = 720.0
+margin_right = 698.0
+margin_bottom = 750.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Make Hybrid"
+flat = false
+align = 1
+
+[node name="TurnButton" type="Button" parent="."]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 920.0
+margin_top = 720.0
+margin_right = 1028.0
+margin_bottom = 750.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Turn"
+flat = false
+align = 1
 

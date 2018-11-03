@@ -9,6 +9,8 @@ export var is_rock : bool = false
 export var is_paper : bool = false
 export var is_scissors : bool = false
 export var is_special : bool = false
+export var is_player : bool = false
+export var is_enemy : bool = false
 
 func set_details(cost : int, hit : int, defense : int, visibility : Color):
 	cost_label.text = str(cost)
