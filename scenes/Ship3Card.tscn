@@ -4,6 +4,7 @@
 [ext_resource path="res://images/blueship2.png" type="Texture" id=2]
 
 [node name="Card" instance=ExtResource( 1 )]
+is_scissors = true
 
 [node name="Symbol" parent="." index="3"]
 texture = ExtResource( 2 )

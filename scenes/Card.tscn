@@ -12,12 +12,14 @@ outline_color = Color( 1, 1, 1, 1 )
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 3 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Card" type="Sprite"]
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
+is_rock = null
+is_paper = null
+is_scissors = null
+is_special = null
 
 [node name="CostLabel" type="Label" parent="."]
 anchor_left = 0.0
@@ -41,7 +43,6 @@ align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_fonts/font" ]
 
 [node name="HitLabel" type="Label" parent="."]
 anchor_left = 0.0
@@ -65,7 +66,6 @@ align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_fonts/font" ]
 
 [node name="DefenseLabel" type="Label" parent="."]
 anchor_left = 0.0
@@ -89,7 +89,6 @@ align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_fonts/font" ]
 
 [node name="Symbol" type="Sprite" parent="."]
 
