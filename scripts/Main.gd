@@ -27,8 +27,8 @@ const CARD_FIRST = 100
 const CARD_SPACING = 120
 
 func _ready():
-	player_card.set_details(0, 0, 25, Color(1, 1, 1))
-	enemy_card.set_details(0, 0, 25, Color(1, 1, 1))
+	player_card.set_details(0, 0, 25)
+	enemy_card.set_details(0, 0, 25)
 	
 	var card = p1_card_resource.instance()
 	add_child(card)
@@ -46,25 +46,25 @@ func _ready():
 	add_child(card)
 	card.position = Vector2(CARD_FIRST, PLAYER_LINE)
 	card.scale = Vector2(0.5, 0.5)
-	card.set_details(1, 1, 1, Color(0.9, 0.9, 0.9))
+	card.set_details(1, 1, 1)
 
 	card = p6_card_resource.instance()
 	add_child(card)
 	card.position = Vector2(CARD_FIRST + CARD_SPACING, PLAYER_LINE)
 	card.scale = Vector2(0.5, 0.5)
-	card.set_details(2, 1, 2, Color(0.9, 0.9, 0.9))
+	card.set_details(2, 1, 2)
 
 	card = ship1_card_resource.instance()
 	add_child(card)
 	card.position = Vector2(CARD_FIRST + CARD_SPACING * 2, PLAYER_LINE)
 	card.scale = Vector2(0.5, 0.5)
-	card.set_details(3, 2, 4, Color(0.9, 0.9, 0.9))
+	card.set_details(3, 2, 4)
 
 	card = ship2_card_resource.instance()
 	add_child(card)
 	card.position = Vector2(CARD_FIRST + CARD_SPACING * 3, PLAYER_LINE)
 	card.scale = Vector2(0.5, 0.5)
-	card.set_details(2, 3, 4, Color(0.9, 0.9, 0.9))
+	card.set_details(2, 3, 4)
 
 func _process(delta):
 	var angle = 0.3 * delta
