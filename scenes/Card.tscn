@@ -20,16 +20,20 @@ is_rock = null
 is_paper = null
 is_scissors = null
 is_special = null
+is_player = null
+is_enemy = null
+
+[node name="Symbol" type="Sprite" parent="."]
 
 [node name="CostLabel" type="Label" parent="."]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -100.0
+margin_left = -90.0
 margin_top = -150.0
-margin_right = -60.0
-margin_bottom = -102.0
+margin_right = -10.0
+margin_bottom = -85.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -39,7 +43,6 @@ size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.180392, 0.694118, 0.945098, 1 )
 text = "0"
-align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -49,9 +52,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -100.0
+margin_left = -90.0
 margin_top = 80.0
-margin_right = -60.0
+margin_right = -10.0
 margin_bottom = 145.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -62,7 +65,6 @@ size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.760784, 0.0666667, 0.0666667, 1 )
 text = "0"
-align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -72,9 +74,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 60.0
+margin_left = 10.0
 margin_top = 80.0
-margin_right = 100.0
+margin_right = 90.0
 margin_bottom = 145.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -85,10 +87,8 @@ size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.164706, 0.701961, 0.184314, 1 )
 text = "0"
-align = 1
+align = 2
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-
-[node name="Symbol" type="Sprite" parent="."]
 

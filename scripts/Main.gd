@@ -3,6 +3,8 @@ extends Node2D
 onready var player_card = $Player/Card
 onready var enemy_card = $Enemy/Card
 
+onready var card_back_resource = load("res://scenes/CardBack.tscn")
+
 onready var p1_card_resource = load("res://scenes/P1Card.tscn")
 onready var p2_card_resource = load("res://scenes/P2Card.tscn")
 onready var p3_card_resource = load("res://scenes/P3Card.tscn")
@@ -25,7 +27,8 @@ const CARD_FIRST = 100
 const CARD_SPACING = 120
 
 func _ready():
-	player_card.set_details(0, 0, 8, Color(1, 1, 1))
+	player_card.set_details(0, 0, 25, Color(1, 1, 1))
+	enemy_card.set_details(0, 0, 25, Color(1, 1, 1))
 	
 	var card = p1_card_resource.instance()
 	add_child(card)
