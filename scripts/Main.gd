@@ -20,6 +20,7 @@ onready var ship2_card_resource = load("res://scenes/Ship2Card.tscn")
 
 onready var PackOfCards = load("res://scripts/PackOfCards.gd")
 onready var Actor = load("res://scripts/Actor.gd")
+onready var StandardPack = load("res://scripts/StandardPack.gd")
 
 onready var hybridiser = $Hybridiser
 onready var turn_button = $TurnButton
@@ -35,6 +36,7 @@ enum STATE { IDLE, ATTACK, BLOCK }
 var state = -1
 var player_actor
 var enemy_actor
+var standard_pack
 
 func _ready():
 	randomize()
@@ -48,6 +50,8 @@ func _ready():
 	
 	actor_dump(player_actor)
 	actor_dump(enemy_actor)
+	
+	standard_pack = StandardPack.new()
 	
 	"""
 	var card = p1_card_resource.instance()

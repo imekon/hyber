@@ -25,7 +25,7 @@ static func CreateCardPack():
 		pack.append(card)
 		
 	# Four level 1 attack ships
-	for i in range(2):
+	for i in range(8):
 		var card = CardData.new(SHIP, i, 1, 1, 2)
 		pack.append(card)
 		
